@@ -41,9 +41,9 @@ public class GreetingController {
 
     @PostMapping("filter")
     public String filter(@RequestParam String tag, Map<String, Object> model) {
-        tag = tag.trim();
         Iterable<Message> messages;
         if (tag != null && !tag.isEmpty()) {
+            tag = tag.trim();
             messages = messageRepository.findByTag(tag);
         } else {
             messages = messageRepository.findAll();

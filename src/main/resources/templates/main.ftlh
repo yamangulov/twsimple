@@ -1,9 +1,8 @@
 <#import "parts/common.ftlh" as c>
 <#import "parts/login.ftlh" as l>
 <@c.page>
-<div>
-    <@l.logout />
-</div>
+    <div><@l.logout /></div>
+    <div><a href="/user">Users list</a></div>
 <div>
     <form method="post">
         <input type="text" name="text" placeholder="Write a message" />

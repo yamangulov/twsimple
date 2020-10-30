@@ -4,7 +4,7 @@
 <@c.page>
 <div>Add new user</div>
 <div>
-    ${message}
+    ${message!"null or missing"}
 </div>
 <@l.login "/registration" />
 </@c.page>

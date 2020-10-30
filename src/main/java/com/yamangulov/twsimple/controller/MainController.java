@@ -21,7 +21,11 @@ public class MainController {
     }
 
     @GetMapping("/")
-    public String greeting(Map<String, Object> model) {
+    public String greeting(
+            @AuthenticationPrincipal User user,
+            Map<String, Object> model
+    ) {
+        model.put("username", user.getUsername());
         return "greeting";
     }
 
